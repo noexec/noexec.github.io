@@ -1,0 +1,5 @@
+User-agent: archive.org_bot
+User-agent: ia_archiver
+User-agent: ia_archiver-web.archive.org
+User-agent: Yandex
+Disallow: /

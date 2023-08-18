@@ -1,0 +1,162 @@
+1. Titles of papers describing human-competitive results:
+
+   (a) Genetic Programming in the Wild: Evolving Unrestricted Bytecode
+   (b) Flight of the FINCH through the Java Wilderness
+
+
+2. Names and addresses of paper authors:
+
+   Michael Orlov <orlovm@cs.bgu.ac.il>
+   Department of Computer Science, Ben-Gurion University of the Negev
+   PO Box 653, Beer Sheva 84105, Israel
+   +972-8-647-2181
+
+   Moshe Sipper <sipper@cs.bgu.ac.il>
+   Department of Computer Science, Ben-Gurion University of the Negev
+   PO Box 653, Beer Sheva 84105, Israel
+   +972-8-647-7880
+
+
+3. Corresponding author:
+
+   Michael Orlov
+
+
+4. Paper abstracts:
+
+   (GECCO 2009) Genetic Programming in the Wild: Evolving Unrestricted Bytecode
+
+   We describe a methodology for evolving Java bytecode, enabling the
+   evolution of *extant*, *unrestricted* Java programs, or programs in other
+   languages that compile to Java bytecode. Bytecode is evolved directly,
+   without any intermediate genomic representation. Our approach is based
+   upon the notion of *compatible crossover*, which produces correct
+   programs by performing operand stack-, local variables-, and control
+   flow-based compatibility checks on source and destination bytecode
+   sections. This is in contrast to existing work that uses restricted
+   subsets of the Java bytecode instruction set as a representation language
+   for individuals in genetic programming. Given the huge universe of
+   unrestricted Java bytecode, *as is* programs, our work enables the
+   applications of evolution within this realm. We experimentally validate
+   our methodology by both extensively testing the correctness of compatible
+   crossover on arbitrary bytecode, and by running evolution on a program
+   that exploits the richness of the Java virtual machine architecture and
+   type system.
+
+
+   (TEVC 2010) Flight of the FINCH through the Java Wilderness
+
+   We describe FINCH (Fertile DarwINian ByteCode Harvester), a
+   methodology for evolving Java bytecode, enabling the evolution of
+   *extant*, *unrestricted* Java programs, or programs in other languages
+   that compile to Java bytecode. Our approach is based upon the notion of
+   *compatible crossover*, which produces correct programs by performing
+   operand stack-, local variables-, and control flow-based compatibility
+   checks on source and destination bytecode sections. This is in contrast
+   to existing work that uses restricted subsets of the Java bytecode
+   instruction set as a representation language for individuals in genetic
+   programming. We demonstrate FINCH's unqualified success at solving a host
+   of problems, including simple and complex regression, trail navigation,
+   image classification, array sum, and tic-tac-toe. FINCH exploits the
+   richness of the Java Virtual Machine architecture and type system,
+   ultimately evolving human-readable solutions in the form of Java
+   programs. The ability to evolve Java programs will hopefully lead to a
+   valuable new tool in the software engineer's toolkit.
+
+
+5. Human-competitive criteria that the work satisfies:
+
+   (D) The result is publishable in its own right as a new scientific result
+       independent of the fact that the result was mechanically created.
+	   
+   (G) The result solves a problem of indisputable difficulty in its field.
+
+
+6. A statement stating why the result satisfies the criteria above:
+
+   As software becomes more and more complex, its development and
+   improvement by human programmers grows increasingly difficult. There is
+   a widely recognized need for automatic improvement of existing software.
+
+   As anybody with even an iota of programming experience will attest,
+   improving software is indisputably difficult ("difficult" being, in fact,
+   quite an understatement) because virtually all source code is written by
+   and adapted for humans (G). No technique previously existed that allowed
+   the automatic improvement of *unrestricted* software written in a *widely
+   used*, real-life programming language. Our system, FINCH, evolves
+   unrestricted programs in bytecode form, thus allowing to improve software
+   written in the mainstream Java language (as well as several other
+   languages that compile to bytecode), while at the same time making the
+   improved source code available to programmers though decompilation.
+
+   Our results are publishable in their own right (D). The evolved programs
+   are fully functional Java programs solving hard problems, and the FINCH
+   system itself is of indisputable interest to the software industry at
+   large. We believe we have made a significant step on the (long) path
+   toward full-fledged Darwinian Software Development.
+
+
+7. Full paper citations:
+
+   Michael Orlov and Moshe Sipper,
+   Genetic Programming in the Wild: Evolving Unrestricted Bytecode.
+   G. Raidl et al. (ed.), Proceedings of the 11th Annual Conference on
+   Genetic and Evolutionary Computation, July 8--12, 2009,
+   Montreal Quebec, Canada, ACM Press, 2009, 1043-1050.
+
+   Michael Orlov and Moshe Sipper,
+   Flight of the FINCH through the Java Wilderness.
+   IEEE Transactions on Evolutionary Computation, 2010, in press.
+
+
+8. Any prize money, if any, is to be divided equally among the co-authors.
+
+
+9. A statement stating why the judges should consider the entry as "best" in
+   comparison to other entries that may also be "human-competitive."
+
+   Our work aims at one of the hardest problems known to (and created by)
+   man: software design. Given the size and importance of the software
+   industry, any step taken toward automating the programmer's task could
+   impact society in ways far outreaching the boundaries of evolutionary
+   computation.
+
+   Very little work within the field of search-based software engineering
+   tackles the issue of evolving *actual* software written in *mainstream*
+   languages. Of the few inroads that have been made, the interesting work
+   of Weimer and Forrest on automatically evolving patches to fix buggy C
+   programs is probably the most worthy of mention. However, their system
+   is currently limited to evolving small patches in predetermined source
+   locations, the reason being that the source code (or, rather, its
+   syntax-tree equivalent) is directly evolved and thus the resulting
+   (evolved) code is not guaranteed to compile. The approach works when
+   fixing bugs with known precise positive and negative test cases, which
+   afford the ability to focus the search (effectively reducing the search
+   space) using software engineering techniques, such as Delta Debugging.
+
+   We believe that we have taken another major step forward. By evolving the
+   (fully expressive) intermediate bytecode representation, and sidestepping
+   compilation altogether, FINCH maintains the correctness of evolving
+   individuals (programs) within the population---leaving the complete search
+   space of correct programs accessible to the evolutionary process. Ours
+   is the first approach that allows viable evolution of extant, real-world
+   software in a mainstream programming language (Java is one of the 2 most
+   popular programming languages, e.g., http://lang-index.sourceforge.net/).
+   Moreover, FINCH is not limited to Java, as many promising new languages
+   take advantage of the Java virtual machine architecture (including Scala,
+   Groovy, Jython, Kawa, JavaFX Script, and Clojure).
+
+   A recent study commissioned by the US Department of Defense on the
+   subject of futuristic ultra-large-scale (ULS) systems that have billions
+   of lines of code noted, among others, that, "Judiciously used, digital
+   evolution can substantially augment the cognitive limits of human
+   designers and can find novel (possibly counterintuitive) solutions to
+   complex ULS system design problems" [1].  This study does not detail any
+   actual research performed but attempts to build a road map for future
+   research. Moreover, it concentrates on huge, futuristic systems, whereas
+   our aim is at current systems of any size. Differences aside, both our
+   work and this study share the vision of true software evolution.
+
+   [1] L. Northrop et al., Ultra-Large-Scale Systems: The Software Challenge
+   of the Future. Carnegie Mellon University, 2006.
+   ISBN 0-9786956-0-7, http://www.sei.cmu.edu/uls
